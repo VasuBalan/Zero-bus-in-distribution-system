@@ -1,0 +1,42 @@
+Program to determine the zero bus quantities :
+
+
+Here two input data file are there :
+1.busxx.dat	- xx represents the bus numbers.
+
+
+Output Files are :
+1.Resultxx.out
+2.Resultxx.out
+
+zerobus.c is the main C file. // Det - To determine the unknown quantites of the user specified buses (Individual buses alone)
+Overall.c is also another main C file to determine the unknown quantities of all other buses by considering (zerobus) one at a time.
+
+In order the get the different test system output, we have to change the data in Offline.txt file
+
+*********************************************
+Where to change in Offline.txt file
+
+busxx.dat	-- xx may be 12 or 33 or 69 bus distribution system.
+1Ybus.txt
+2Volt.txt	-- Starting with 1,2,3,4 .txt are intermediate file.	
+3Jaco.txt 	   to check our outputs at every step.
+4Inv.txt
+Resultxx.out	-- xx may be 12 or 33 or 69 bus distribution system.
+*********************************************
+
+Limitations : 
+  upto now this code is written by considering the system without any tie switches. 
+This cannot be used if we considered tie switches in the system.
+
+
+To run this program in linux
+
+gcc -o anyname LF.c -lm
+./anyname
+
+
+To run this program in windows 
+
+gcc -o anyname LF.c
+anyname
